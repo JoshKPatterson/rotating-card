@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 300px;
+}
+
+.card:hover .card__content {
+  transform: rotateY(.5turn);
+}
+
+.card__content {
+  text-align: center;
+  background-color: pink;
+  position: relative;
+  padding: 5em;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 3px lightgrey;
+}
+
+.card__front, .card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+    border-radius: 15px;
+
+}
+
+.card__title {
+font-size: 2rem;
+}
+
+.card__back {
+  transform: rotateY(.5turn);
+  background-color: lightblue;
+}
